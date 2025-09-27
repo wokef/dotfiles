@@ -16,6 +16,14 @@ else
 fi
 ln -s $DIR/lazygit/config.yml ~/.config/lazygit/config.yml
 
+echo "Installing lazydocker config"
+if [ ! -f ~/.config/lazydocker/config.yml ]; then
+    mkdir -p ~/.config/lazydocker
+else
+    mv ~/.config/lazydocker/config.yml ~/.config/lazydocker/config.yml.bak
+fi
+ln -s $DIR/lazydocker/config.yml ~/.config/lazydocker/config.yml
+
 echo "Installing tmux"
 if [ -f ~/.tmux.conf ]; then
     mv ~/.tmux.conf ~/.tmux.conf.bak
@@ -29,6 +37,10 @@ if [[ $yn =~ ^[Yy]$ ]]; then
 
     if [ -f ~/.config/lazygit/config.yml.bak ]; then
         rm -f ~/.config/lazygit/config.yml.bak
+    fi
+
+    if [ -f ~/.config/lazydocker/config.yml.bak ]; then
+        rm -f ~/.config/lazydocker/config.yml.bak
     fi
 
     if [ -f ~/.tmux.conf.bak ]; then
