@@ -8,10 +8,20 @@ if [ -f ~/.zshrc ]; then
 fi
 ln -s $DIR/.zshrc ~/.zshrc
 
+echo "Installing tmux"
+if [ -f ~/.tmux.conf ]; then
+    mv ~/.tmux.conf ~/.tmux.conf.bak
+else
+ln -s $DIR/tmux/.tmux.conf ~/.tmux.conf
+
 read -p "Do you want to clear backup files? [Y/n] " yn
 [ -z $yn ] && yn="Y"
 if [[ $yn =~ ^[Yy]$ ]]; then
     rm -f ~/.zshrc.bak
+
+    if [ -f ~/.tmux.conf.bak ]; then
+        rm -f ~/.tmux.conf.bak
+    fi
 
     echo "Backup files cleared."
 fi
