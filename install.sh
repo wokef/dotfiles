@@ -27,7 +27,7 @@ ln -s $DIR/lazydocker/config.yml ~/.config/lazydocker/config.yml
 echo "Installing tmux"
 if [ -f ~/.tmux.conf ]; then
     mv ~/.tmux.conf ~/.tmux.conf.bak
-else
+fi
 ln -s $DIR/tmux/.tmux.conf ~/.tmux.conf
 
 read -p "Do you want to clear backup files? [Y/n] " yn
