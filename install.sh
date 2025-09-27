@@ -8,6 +8,14 @@ if [ -f ~/.zshrc ]; then
 fi
 ln -s $DIR/.zshrc ~/.zshrc
 
+echo "Installing lazygit config"
+if [ ! -f ~/.config/lazygit/config.yml ]; then
+    mkdir -p ~/.config/lazygit
+else
+    mv ~/.config/lazygit/config.yml ~/.config/lazygit/config.yml.bak
+fi
+ln -s $DIR/lazygit/config.yml ~/.config/lazygit/config.yml
+
 echo "Installing tmux"
 if [ -f ~/.tmux.conf ]; then
     mv ~/.tmux.conf ~/.tmux.conf.bak
@@ -18,6 +26,10 @@ read -p "Do you want to clear backup files? [Y/n] " yn
 [ -z $yn ] && yn="Y"
 if [[ $yn =~ ^[Yy]$ ]]; then
     rm -f ~/.zshrc.bak
+
+    if [ -f ~/.config/lazygit/config.yml.bak ]; then
+        rm -f ~/.config/lazygit/config.yml.bak
+    fi
 
     if [ -f ~/.tmux.conf.bak ]; then
         rm -f ~/.tmux.conf.bak

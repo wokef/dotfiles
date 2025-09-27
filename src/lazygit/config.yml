@@ -1,0 +1,25 @@
+gui:
+  border: 'rounded'
+  theme:
+    activeBorderColor:
+      - '#22e8df'
+    inactiveBorderColor:
+      - '#6a7a7a'
+    searchingActiveBorderColor:
+      - '#dc396a'
+    optionsTextColor:
+      - '#22e8df'
+    selectedLineBgColor:
+      - '#143652'
+    inactiveViewSelectedLineBgColor:
+      - '#143652'
+    unstagedChangesColor:
+      - '#dc396a'
+    cherryPickedCommitBgColor:
+      - '#22e8df'
+    cherryPickedCommitFgColor:
+      - '#001628'
+    markedBaseCommitBgColor:
+      - '#e6c62f'
+    markedBaseCommitFgColor:
+      - '#001628'
