@@ -47,7 +47,7 @@ eval "$(tmuxifier init -)"
 alias tl='tmuxifier load-session'
 
 # Include local configs
-DIR="$(dirname $(readlink -f .zshrc))"
+DIR="$(dirname $(readlink -f ~/.zshrc))"
 for config_file in $(find $DIR/local -name "*.sh" -type f); do
     [ -f $config_file ] && source $config_file
 done
