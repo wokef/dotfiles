@@ -56,3 +56,5 @@ done
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
 source "$DIR/scripts/dailyquote.sh"
+
+inspire
