@@ -4,14 +4,14 @@ gui:
     activeBorderColor:
       - '#22e8df'
     inactiveBorderColor:
-      - '#6a7a7a'
+      - '#545c7e'
     searchingActiveBorderColor:
       - '#dc396a'
     optionsTextColor:
       - '#22e8df'
     selectedLineBgColor:
-      - '#143652'
+      - '#292E42'
     inactiveViewSelectedLineBgColor:
-      - '#143652'
+      - '#292E42'
     selectedRangeBgColor:
-      - '#143652'
+      - '#292E42'
